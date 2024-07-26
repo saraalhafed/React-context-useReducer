@@ -8,7 +8,7 @@ import spinner from "../assets/Spinner-2.gif"
 
 
 const ReducerExample = () => {
-
+/* when we use usstate we need 3 variable useState ,usReducer */
   const [state, dispatch] = useReducer(dogReducer, initialState)
   const { loading, dog, error } = state;  /* destructuring */
 
@@ -39,7 +39,7 @@ const ReducerExample = () => {
             <img src={spinner} alt="loading" />
           </div>
         )}
-        {dog && <img src={dog} alt="dog-image" />}  {/* at first we dont have img so we */}
+        {dog && <img src={dog} alt="dog-image" />}  {/* at first we dont have img so we dont want to see brocken img*/}
         {error && <p style={{ color: 'red' }}>{error}</p>}
       </div>
     </Container>
